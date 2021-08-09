@@ -1,0 +1,22 @@
+{
+  "name": "prueba_playvox",
+  "version": "1.0.0",
+  "description": "TDD para la prueba",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielp16/prueba_playvox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielp16/prueba_playvox/issues"
+  },
+  "homepage": "https://github.com/gabrielp16/prueba_playvox#readme",
+  "dependencies": {
+    "jest": "^27.0.6"
+  }
+}

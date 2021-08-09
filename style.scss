@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#item-container{
+    display: block;
+    grid-template-columns: 100% auto;
+    padding-top: 3rem;
+    background: #202329;
+}
+
+.item{
+    display: flex;
+    width: 600px;
+    height: 220px;
+    box-shadow: rgba(0,0,0,.1);
+    overflow: hidden;
+    background: #3c3e44;
+    border-radius: .5rem;
+    margin: auto auto 3rem;
+}

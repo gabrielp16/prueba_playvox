@@ -12,13 +12,11 @@ const parameters = {
         'Content-Type': 'application/json'
     })
 }
-
 const onIntersec = ([entry]) => {
     if (API_URL && !loading && entry.isIntersecting) {
         makeRequest();
     }
 }
-
 async function makeRequest() {
     loading = true;
     const response = await fetch(API_URL, parameters)
@@ -27,25 +25,13 @@ async function makeRequest() {
     renderItems(data.results);
 }
 
-const makeRequests = () => {
-    loading = true;
-    fetch(`${API_URL}/character`)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data.info.next)
-            cleanUp(data.info.next);
-            renderItems(data.results)
-
-        });
-}
-
 const cleanUp = nextPage => {
     API_URL = nextPage;
     loading = false;
 }
 
 const renderItems = results => {
-    results.forEach(item => {
+    results.map(item => {
         itemContainer.appendChild(createItem(item));
     });
 }
@@ -55,10 +41,10 @@ const createItem = item => {
     newItem.classList.add('item');
     newItem.innerHTML = (
         `
+            <img class="char-img" src=${item.image} />
             <div class="char-id">${item.id}</div>
             <div class="char-name">${item.name}</div>
             <div class="char-status">${item.status}</div>
-            <img class="char-img" src=${item.image} />
             <div class="char-species">${item.species}</div>
         `
     );

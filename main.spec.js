@@ -1,8 +1,10 @@
 
-const testCode = require('./main');
+const TestCode = require('./main');
 
-describe('Calculador de area', () => {
-    const testCode = new testCode();
+describe('Obtener datos de ap Rick & Morty', () => {
+    const testCode = new TestCode();
 
-
+    it('Crear un nuevo item', () => {
+        const resultado = testCode.createItem(item)
+    })
 })
